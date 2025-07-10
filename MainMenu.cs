@@ -1,9 +1,14 @@
+using System;
+using System.Security.Cryptography;
+using System.Threading; 
+
+
 namespace TextRPG
 {
-        class MainMenu
+    class MainMenu
     {
         public static void Menu()
-        {   
+        {
             // Main Menu 
             Console.WriteLine("------------");
             Console.WriteLine("THE INTERVIEW");
@@ -17,10 +22,10 @@ namespace TextRPG
 
             while (true)
             {
-                Console.WriteLine("Welcome to The Interview!");
-                Console.WriteLine("This is a Text Based RPG adventure where you play a poor lowly candidate");
-                Console.WriteLine("Your goal is to get the job of your dreams at NotMeta Corp");
-                Console.WriteLine("Good luck!");
+                TypeWriter("Welcome to The Interview!");
+                TypeWriter("This is a Text Based RPG adventure where you play a poor lowly candidate");
+                TypeWriter("Your goal is to get the job of your dreams at NotMeta Corp");
+                TypeWriter("Good luck!");
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("Please choose an option from the menu");
@@ -47,7 +52,18 @@ namespace TextRPG
                 }
 
 
+                // slow text effect
+            
+            void TypeWriter(string text, int delay = 50)
+                {
 
+                    foreach (char c in text)
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(delay);
+                    }
+                    Console.WriteLine(); 
+            }
 
 
 
