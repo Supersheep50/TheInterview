@@ -3,7 +3,7 @@ namespace TextRPG
 
     class NewGame
     {
-        public static void PlayerCreation()
+        public static void PlayerSelection()
         {
 
             Console.WriteLine("Hey there Candidate! Welcome to NotMeta, lets head to the interview room.");
@@ -21,11 +21,14 @@ namespace TextRPG
             string jobChoice = Console.ReadLine();
             Console.ResetColor();
 
+            Player player;
+
             switch (jobChoice)
             {
 
                 case "1":
-                    SoftwareDev.Dev();
+                    player = new SoftwareDev();
+                    SoftwareDev.SoftwareDevPath();
                     break;
                 case "2":
                     //tbd 

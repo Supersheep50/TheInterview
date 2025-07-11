@@ -35,7 +35,7 @@ namespace TextRPG
                 {
 
                     case "1":
-                        NewGame.PlayerCreation();
+                        NewGame.PlayerSelection();
                         break;
                     case "2":
                         //tbd 
