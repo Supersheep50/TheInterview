@@ -31,17 +31,18 @@ namespace TextRPG
                     SoftwareDev.SoftwareDevPath();
                     break;
                 case "2":
-                    //tbd 
+                    player = new Recruitment();
+                    Recruitment.RecruiterPath();
                     break;
                 case "3":
-                    //tbd
+                    player = new Sales();
+                    Sales.SalesPath();
                     break;
                 case "4":
-                    //tbd
+                    player = new CEO();
+                    CEO.CEOPath();
                     break;
-                case "5":
-                    //tbd
-                    break;
+                
             }
 
         }

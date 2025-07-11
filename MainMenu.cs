@@ -38,16 +38,16 @@ namespace TextRPG
                         NewGame.PlayerSelection();
                         break;
                     case "2":
-                        //tbd 
-                        break;
+                        Console.WriteLine("This doesn't work yet, sorry about that");
+                        continue;
                     case "3":
-                        //tbd
-                        break;
+                        Console.WriteLine("This will work someday I promise");
+                        continue;
                     case "4":
-                        //tbd
-                        break;
+                        Console.WriteLine("Steph is probably reading this and shes knows all about me.");
+                        continue;
                     case "5":
-                        //tbd
+                        Console.WriteLine("See ya later alligator!");
                         break;
                 }
 
