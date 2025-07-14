@@ -4,7 +4,7 @@ namespace TextRPG
     {
         public void Recruiter()
         {
-            Name = "Recruiter";
+            Title = "Recruiter";
             Health = "100";
         }
         public override void Attack()
