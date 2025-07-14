@@ -48,13 +48,15 @@ namespace TextRPG
                         continue;
                     case "5":
                         Console.WriteLine("See ya later alligator!");
+                        Environment.Exit(0);
                         break;
+
                 }
 
 
                 // slow text effect
             
-            void TypeWriter(string text, int delay = 50)
+            void TypeWriter(string text, int delay = 20)
                 {
 
                     foreach (char c in text)

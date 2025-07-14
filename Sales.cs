@@ -4,7 +4,7 @@ namespace TextRPG
     {
         public void AccountManager()
         {
-            Name = "Sales";
+            Title = "Sales";
             Health = "100";
         }
         public override void Attack()

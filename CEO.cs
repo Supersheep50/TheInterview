@@ -4,7 +4,7 @@ namespace TextRPG
     {
         public void Asshole()
         {
-            Name = "CEO";
+            Title = "CEO";
             Health = "1";
         }
         public override void Attack()

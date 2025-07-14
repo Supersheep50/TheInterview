@@ -31,8 +31,8 @@ namespace TextRPG
                     SoftwareDev.SoftwareDevPath();
                     break;
                 case "2":
-                    player = new Recruitment();
-                    Recruitment.RecruiterPath();
+                    player = new Recruiter();
+                    Recruiter.RecruiterPath();
                     break;
                 case "3":
                     player = new Sales();
