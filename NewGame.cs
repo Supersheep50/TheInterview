@@ -7,6 +7,8 @@ namespace TextRPG
         {
 
             Console.WriteLine("Hey there Candidate! Welcome to NotMeta, lets head to the interview room.");
+            Console.WriteLine("My name is Gene. I'm the Interview Coordinator and a pyscopath.");
+            Console.WriteLine("Haha thats just one of my jokes. You'll get used to them. Probably.");
             Console.WriteLine("Lets take a look at this CV....");
             Console.WriteLine("Wow, that is a pretty terrible name");
             Console.ForegroundColor = ConsoleColor.Red;

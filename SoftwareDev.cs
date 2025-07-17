@@ -1,3 +1,4 @@
+
 namespace TextRPG
 {
     class SoftwareDev : Player
@@ -19,7 +20,7 @@ namespace TextRPG
             while (true)
             {
                 Console.WriteLine("Software Dev Path has been chosen! Sorry that was a bit dramatic...");
-                Console.WriteLine("Alright then, lets hear about some of your skills then.");
+                Console.WriteLine("Alright then, lets hear about some of your skills.");
                 Console.WriteLine("You have 100 attribute points. Please assign them to these 3 skills.");
                 Console.WriteLine("1.Typing 2.Problem Solving 3.Smugness");
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -46,9 +47,8 @@ namespace TextRPG
                     Console.WriteLine($"Typing: {dev.Typing}");
                     Console.WriteLine($"Problem Solving: {dev.ProblemSolving}");
                     Console.WriteLine($"Smugness: {dev.Smugness}");
-
-                    return dev;
-                }
+                    SWERoundOne();
+                   }
 
                 else
                 {
@@ -56,16 +56,32 @@ namespace TextRPG
                     Console.WriteLine($"\nInvalid total. You assigned {total}, but need exactly 100 points.");
                     Console.WriteLine("Please try again");
                     Console.ResetColor();
-                 
+
                 }
                    
-                }
             }
-        }
-
-            
 
         }
+         public static SoftwareDev SWERoundOne() {
+
+            Console.WriteLine("Wow you look like a strong candidate.");
+            MainMenu.TypeWriter("Lets get into it. There will be 3 Rounds of interviews.");
+            MainMenu.TypeWriter("Round 1 is with John, he's our HR guy. Loves to chat.");
+            MainMenu.TypeWriter("Next up is Sheila, shes our Engineering Lead and has been here an eternity.");
+            MainMenu.TypeWriter("Finally, you'll meet Galgomel, harbinger of souls. He's a PM");
+            MainMenu.TypeWriter("Excited?");
+            Console.ForegroundColor = ConsoleColor.Red;
+            MainMenu.TypeWriter("Please enter Yes or No");
+            string excitedAnswer = Console.ReadLine();
+
+
+
+
+            return null; 
+        
+            }
+    }
+}
 
     
     

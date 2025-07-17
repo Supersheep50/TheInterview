@@ -1,11 +1,12 @@
 using System;
 using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading; 
 
 
 namespace TextRPG
 {
-    class MainMenu
+    public class MainMenu
     {
         public static void Menu()
         {
@@ -52,11 +53,13 @@ namespace TextRPG
                         break;
 
                 }
+            }
+        }
 
 
                 // slow text effect
             
-            void TypeWriter(string text, int delay = 20)
+            public static void TypeWriter(string text, int delay = 20)
                 {
 
                     foreach (char c in text)
@@ -77,5 +80,4 @@ namespace TextRPG
 
 
         }
-    }
-}
+    
