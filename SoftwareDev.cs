@@ -74,6 +74,20 @@ namespace TextRPG
             MainMenu.TypeWriter("Please enter Yes or No");
             string excitedAnswer = Console.ReadLine();
 
+            if (excitedAnswer == "Yes" | excitedAnswer == "Y" | excitedAnswer == "yes")
+            {
+                MainMenu.TypeWriter("Hmm...you really don't look it.");
+
+
+            }
+            else
+            {
+                MainMenu.TypeWriter("Oh wow. Honesty the best policy eh?");
+                MainMenu.TypeWriter("Well how aboiut I shoot you in the face? How is that huh?");
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                MainMenu.TypeWriter("");
+            }
+
 
 
 
