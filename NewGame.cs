@@ -7,10 +7,17 @@ namespace TextRPG
         {
 
             MainMenu.TypeWriter("Hey there Candidate! Welcome to NotMeta, lets head to the interview room.");
-            MainMenu.TypeWriter("My name is Gene. I'm the Interview Coordinator and a pyscopath.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            MainMenu.TypeWriter("You sit down on an old plastic chair in a room that has windows on all sides.");
+            MainMenu.TypeWriter("Across from the steel metallic desk is Gene, the coordinator.");
+            MainMenu.TypeWriter("He hasn't stopped smiling since you met him. He hasn't blinked either come to think of it.");
+            MainMenu.TypeWriter("He starts to arrange the pieces of paper he's brought with him. You get a quick glance, they're all blank.");
+            MainMenu.TypeWriter("He turns to face you and takes a breath. The room smells like chlorine.");
+            Console.ResetColor();
+            MainMenu.TypeWriter("My name is Gene. I'm the Interview Coordinator here at NotMeta and a pyscopath.");
             MainMenu.TypeWriter("Haha thats just one of my jokes. You'll get used to them. Probably.");
             MainMenu.TypeWriter("Lets take a look at this CV....");
-            MainMenu.TypeWriter("Wow, that is a pretty terrible name");
+            MainMenu.TypeWriter("Huh, I can see the Hiring Manager wanted to talk to you. Is this your real name?");
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please enter your name");
             string userName = Console.ReadLine();
@@ -30,18 +37,22 @@ namespace TextRPG
 
                 case "1":
                     player = new SoftwareDev();
+                    GameState.CurrentPlayer = player;
                     SoftwareDev.SoftwareDevPath();
                     break;
                 case "2":
                     player = new Recruiter();
+                    GameState.CurrentPlayer = player;
                     Recruiter.RecruiterPath();
                     break;
                 case "3":
                     player = new Sales();
+                    GameState.CurrentPlayer = player;
                     Sales.SalesPath();
                     break;
                 case "4":
                     player = new CEO();
+                    GameState.CurrentPlayer = player;
                     CEO.CEOPath();
                     break;
                 
