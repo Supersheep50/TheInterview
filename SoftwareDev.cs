@@ -1,4 +1,6 @@
 
+using System.ComponentModel.Design;
+
 namespace TextRPG
 {
     class SoftwareDev : Player
@@ -19,10 +21,10 @@ namespace TextRPG
 
             while (true)
             {
-                Console.WriteLine("Software Dev Path has been chosen! Sorry that was a bit dramatic...");
-                Console.WriteLine("Alright then, lets hear about some of your skills.");
-                Console.WriteLine("You have 100 attribute points. Please assign them to these 3 skills.");
-                Console.WriteLine("1.Typing 2.Problem Solving 3.Smugness");
+                MainMenu.TypeWriter("Software Dev Path has been chosen! Sorry that was a bit dramatic...");
+                MainMenu.TypeWriter("Alright then, lets hear about some of your skills.");
+                MainMenu.TypeWriter("You have 100 attribute points. Please assign them to these 3 skills.");
+                MainMenu.TypeWriter("1.Typing 2.Problem Solving 3.Smugness");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("How many points would you like to assign to Typing?");
                 dev.Typing = int.Parse(Console.ReadLine());
@@ -39,14 +41,14 @@ namespace TextRPG
                 if (total == 100)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\nPlayer Created!");
+                    MainMenu.TypeWriter("\nPlayer Created!");
                     Console.ResetColor();
 
-                    Console.WriteLine($"\nTitle: {dev.Title}");
-                    Console.WriteLine($"Health: {dev.Health}");
-                    Console.WriteLine($"Typing: {dev.Typing}");
-                    Console.WriteLine($"Problem Solving: {dev.ProblemSolving}");
-                    Console.WriteLine($"Smugness: {dev.Smugness}");
+                    MainMenu.TypeWriter($"\nTitle: {dev.Title}");
+                    MainMenu.TypeWriter($"Health: {dev.Health}");
+                    MainMenu.TypeWriter($"Typing: {dev.Typing}");
+                    MainMenu.TypeWriter($"Problem Solving: {dev.ProblemSolving}");
+                    MainMenu.TypeWriter($"Smugness: {dev.Smugness}");
                     SWERoundOne();
                    }
 
@@ -64,7 +66,7 @@ namespace TextRPG
         }
          public static SoftwareDev SWERoundOne() {
 
-            Console.WriteLine("Wow you look like a strong candidate.");
+            MainMenu.TypeWriter("Wow you look like a strong candidate.");
             MainMenu.TypeWriter("Lets get into it. There will be 3 Rounds of interviews.");
             MainMenu.TypeWriter("Round 1 is with John, he's our HR guy. Loves to chat.");
             MainMenu.TypeWriter("Next up is Sheila, shes our Engineering Lead and has been here an eternity.");
@@ -85,7 +87,10 @@ namespace TextRPG
                 MainMenu.TypeWriter("Oh wow. Honesty the best policy eh?");
                 MainMenu.TypeWriter("Well how aboiut I shoot you in the face? How is that huh?");
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                MainMenu.TypeWriter("");
+                MainMenu.TypeWriter("Gene shot you in the face. You Died.");
+                MainMenu.TypeWriter("GAME OVER");
+                Console.ResetColor(); 
+                MainMenu.Menu(); 
             }
 
 

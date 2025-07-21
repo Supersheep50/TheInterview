@@ -6,20 +6,20 @@ namespace TextRPG
         public static void PlayerSelection()
         {
 
-            Console.WriteLine("Hey there Candidate! Welcome to NotMeta, lets head to the interview room.");
-            Console.WriteLine("My name is Gene. I'm the Interview Coordinator and a pyscopath.");
-            Console.WriteLine("Haha thats just one of my jokes. You'll get used to them. Probably.");
-            Console.WriteLine("Lets take a look at this CV....");
-            Console.WriteLine("Wow, that is a pretty terrible name");
+            MainMenu.TypeWriter("Hey there Candidate! Welcome to NotMeta, lets head to the interview room.");
+            MainMenu.TypeWriter("My name is Gene. I'm the Interview Coordinator and a pyscopath.");
+            MainMenu.TypeWriter("Haha thats just one of my jokes. You'll get used to them. Probably.");
+            MainMenu.TypeWriter("Lets take a look at this CV....");
+            MainMenu.TypeWriter("Wow, that is a pretty terrible name");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Please enter your name");
+            MainMenu.TypeWriter("Please enter your name");
             string userName = Console.ReadLine();
             Console.ResetColor();
-            Console.WriteLine($"Alright, I'll call you {userName} if you insist");
-            Console.WriteLine($"Now {userName}, what role are you here to interview for?");
-            Console.WriteLine("1.Software Development 2.Recruitment 3.Sales 4.CEO");
+            MainMenu.TypeWriter($"Alright, I'll call you {userName} if you insist");
+            MainMenu.TypeWriter($"Now {userName}, what role are you here to interview for?");
+            MainMenu.TypeWriter("1.Software Development 2.Recruitment 3.Sales 4.CEO");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Please choose an option");
+            MainMenu.TypeWriter("Please choose an option");
             string jobChoice = Console.ReadLine();
             Console.ResetColor();
 

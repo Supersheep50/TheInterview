@@ -29,7 +29,7 @@ namespace TextRPG
                 TypeWriter("Good luck!");
                 Console.WriteLine();
                 Console.WriteLine();
-                Console.WriteLine("Please choose an option from the menu");
+                TypeWriter("Please choose an option from the menu");
                 string userChoice = Console.ReadLine();
 
                 switch (userChoice)
@@ -39,16 +39,16 @@ namespace TextRPG
                         NewGame.PlayerSelection();
                         break;
                     case "2":
-                        Console.WriteLine("This doesn't work yet, sorry about that");
+                        TypeWriter("This doesn't work yet, sorry about that");
                         continue;
                     case "3":
-                        Console.WriteLine("This will work someday I promise");
+                        TypeWriter("This will work someday I promise");
                         continue;
                     case "4":
-                        Console.WriteLine("Steph is probably reading this and shes knows all about me.");
+                        TypeWriter("Steph is probably reading this and shes knows all about me.");
                         continue;
                     case "5":
-                        Console.WriteLine("See ya later alligator!");
+                        TypeWriter("See ya later alligator!");
                         Environment.Exit(0);
                         break;
 
@@ -59,7 +59,7 @@ namespace TextRPG
 
                 // slow text effect
             
-            public static void TypeWriter(string text, int delay = 20)
+            public static void TypeWriter(string text, int delay = 10)
                 {
 
                     foreach (char c in text)
