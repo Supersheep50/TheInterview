@@ -37,22 +37,42 @@ namespace TextRPG
 
                 case "1":
                     player = new SoftwareDev();
-                    GameState.CurrentPlayer = player;
+                    GameState.CurrentProgress = new GameProgress
+                    {
+                        Player = player,
+                        CurrentStage = "Intro"
+                    };
+
                     SoftwareDev.SoftwareDevPath();
                     break;
                 case "2":
                     player = new Recruiter();
-                    GameState.CurrentPlayer = player;
+                    GameState.CurrentProgress = new GameProgress
+                    {
+                        Player = player,
+                        CurrentStage = "Intro"
+                    };
+
                     Recruiter.RecruiterPath();
                     break;
                 case "3":
                     player = new Sales();
-                    GameState.CurrentPlayer = player;
+                    GameState.CurrentProgress = new GameProgress
+                    {
+                        Player = player,
+                        CurrentStage = "Intro"
+                    };
+
                     Sales.SalesPath();
                     break;
                 case "4":
                     player = new CEO();
-                    GameState.CurrentPlayer = player;
+                    GameState.CurrentProgress = new GameProgress
+                    {
+                        Player = player,
+                        CurrentStage = "Intro"
+                    };
+
                     CEO.CEOPath();
                     break;
                 

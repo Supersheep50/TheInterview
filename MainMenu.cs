@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading; 
@@ -11,7 +12,7 @@ namespace TextRPG
         public static void Menu()
 
 
-    // Intro art (need to make file later)
+        // Intro art (need to make file later)
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine(@"
@@ -78,11 +79,12 @@ namespace TextRPG
                         NewGame.PlayerSelection();
                         break;
                     case "2":
-                        TypeWriter("This doesn't work yet, sorry about that");
-                        continue;
+                        SaveSystem.Save();
+                        break;
                     case "3":
-                        TypeWriter("This will work someday I promise");
-                        continue;
+                        SaveSystem.Load();
+                        ResumeGame();
+                        break;
                     case "4":
                         TypeWriter("Steph is probably reading this and shes knows all about me.");
                         continue;
@@ -96,18 +98,39 @@ namespace TextRPG
         }
 
 
-                // slow text effect
-            
-            public static void TypeWriter(string text, int delay = 10)
-                {
+        // slow text effect
 
-                    foreach (char c in text)
-                    {
-                        Console.Write(c);
-                        Thread.Sleep(delay);
-                    }
-                    Console.WriteLine(); 
+        public static void TypeWriter(string text, int delay = 10)
+        {
+
+            foreach (char c in text)
+            {
+                Console.Write(c);
+                Thread.Sleep(delay);
             }
+            Console.WriteLine();
+        }
+private static void ResumeGame()
+{
+    var progress = GameState.CurrentProgress;
+    if (progress == null || progress.Player == null)
+    {
+        TypeWriter("No saved game to resume.");
+        return;
+    }
+
+    switch (progress.CurrentStage)
+    {
+        case "SWE_Round1":
+            SoftwareDev.SWERoundOne();
+            break;
+        default:
+            TypeWriter("Saved stage not recognized.");
+            break;
+    }
+}
+
+
 
 
 

@@ -1,0 +1,13 @@
+{
+  "Player": {
+    "Title": "Software Developer",
+    "Health": "100",
+    "Typing": 33,
+    "ProblemSolving": 34,
+    "Smugness": 33,
+    "Interviewing": 0,
+    "Admin": 0,
+    "Grit": 0
+  },
+  "CurrentStage": "SWE_Round1"
+}

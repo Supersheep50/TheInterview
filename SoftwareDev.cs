@@ -49,6 +49,40 @@ namespace TextRPG
                     MainMenu.TypeWriter($"Typing: {dev.Typing}");
                     MainMenu.TypeWriter($"Problem Solving: {dev.ProblemSolving}");
                     MainMenu.TypeWriter($"Smugness: {dev.Smugness}");
+                    GameState.CurrentProgress = new GameProgress
+                    {
+                        Player = dev,
+                        CurrentStage = "SWE_Round1"
+                    };
+                    MainMenu.TypeWriter("Would you like to:");
+MainMenu.TypeWriter("1. Save and continue");
+MainMenu.TypeWriter("2. Save and exit to main menu");
+MainMenu.TypeWriter("3. Continue without saving");
+
+string saveChoice = Console.ReadLine();
+
+switch (saveChoice)
+{
+    case "1":
+        SaveSystem.Save();
+        break;
+
+    case "2":
+        SaveSystem.Save();
+        MainMenu.TypeWriter("Game saved. Returning to main menu...");
+        MainMenu.Menu();
+        return null;
+
+    case "3":
+        MainMenu.TypeWriter("Okay, continuing without saving.");
+        break;
+
+    default:
+        MainMenu.TypeWriter("Invalid choice. Continuing without saving.");
+        break;
+}
+
+
                     SWERoundOne();
                    }
 
