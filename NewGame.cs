@@ -10,6 +10,27 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("You sit down on an old plastic chair in a room that has windows on all sides.");
             MainMenu.TypeWriter("Across from the steel metallic desk is Gene, the coordinator.");
+            Console.ResetColor();
+            Console.WriteLine(@"    
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXX         XXXXXXXX
+XXXXXXXXXXXXXXXX              XXXXXXX
+XXXXXXXXXXXXX                   XXXXX
+ XXX     _________ _________     XXX      THE
+  XX    I  _xxxxx I xxxxx_  I    XX        LOCKER
+ ( X----I         I         I----X )           GNOME
+( +I    I      00 I 00      I    I+ )
+ ( I    I    __0  I  0__    I    I )
+  (I    I______ /   \_______I    I)
+   I           ( ___ )           I
+   I    _  :::::::::::::::  _    i
+    \    \___ ::::::::: ___/    /
+     \_      \_________/      _/
+       \        \___,        /
+         \                 /
+          |\             /|
+          |  \_________/  |");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("He hasn't stopped smiling since you met him. He hasn't blinked either come to think of it.");
             MainMenu.TypeWriter("He starts to arrange the pieces of paper he's brought with him. You get a quick glance, they're all blank.");
             MainMenu.TypeWriter("He turns to face you and takes a breath. The room smells like chlorine.");
