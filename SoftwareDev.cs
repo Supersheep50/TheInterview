@@ -126,7 +126,7 @@ namespace TextRPG
                 MainMenu.TypeWriter($"Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 MainMenu.TypeWriter("Finally I could be alone for a few minutes.");
-                MainMenu.TypeWriter("Strange, I feel I can hear whispering coming form inside the room. Or someone looking at me.");
+                MainMenu.TypeWriter("Strange, I feel I can hear whispering coming from inside the room. Or someone looking at me.");
                 MainMenu.TypeWriter("Or that someone is standing awfully close to me. Scanning the room, I see nothing.");
                 MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.");
                 Console.ForegroundColor = ConsoleColor.Red;

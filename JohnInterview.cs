@@ -35,7 +35,23 @@ namespace TextRPG
             Console.ResetColor();
             MainMenu.TypeWriter($"Please, take a seat {Player.Name}");
             MainMenu.TypeWriter("Apologies for making you wait.");
-            MainMenu.TypeWriter("");
+            MainMenu.TypeWriter("This interview will test your Problem Solving ability.");
+            MainMenu.TypeWriter("You will be asked 3 questions. For each question right you will gain 10 points for Problem Solving.");
+            MainMenu.TypeWriter("For every question you get wrong, you will lose 10 points. Aftert that, we shall fight to the death.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            MainMenu.TypeWriter("Excuse me?");
+            Console.ResetColor();
+            MainMenu.TypeWriter("We shall fight to the death.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            MainMenu.TypeWriter("Yes I heard that but bit but what does it mean?");
+            Console.ForegroundColor = ConsoleColor.White;
+            MainMenu.TypeWriter("It means exactly what it means. One of us will perish, you most likely.");
+            MainMenu.TypeWriter("Now, no more nonsense let us begin.");
+            MainMenu.TypeWriter("What gets wetter the more you dry it?");
+            Console.ForegroundColor = ConsoleColor.Red;
+            MainMenu.TypeWriter("1. Humour 2. A Towel 3. Your Hair");
+            MainMenu.TypeWriter("Please choose an answer.");
+
         }
     }
 }
