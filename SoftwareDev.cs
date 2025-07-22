@@ -111,18 +111,53 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please enter Yes or No");
             string excitedAnswer = Console.ReadLine();
+            Console.ResetColor();
 
             if (excitedAnswer == "Yes" | excitedAnswer == "Y" | excitedAnswer == "yes")
             {
                 MainMenu.TypeWriter("Hmm...you really don't look it.");
-                MainMenu.TypeWriter("Nevermind, not like you can leave any time you want. Which you can of course.");
+                MainMenu.TypeWriter("Nevermind, not like you can leave any time you want. Which of course you can");
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                MainMenu.TypeWriter("Gene was still smiling. It was as if he had been starting past me the entire time.");
+                MainMenu.TypeWriter("Gene was still smiling. It was as if he had been staring past me the entire time.");
                 MainMenu.TypeWriter("I could feel sweat start to gather on my brow, I didn't want to wipe it away and hoped he couldn't see it.");
                 MainMenu.TypeWriter("So far this process has been quite different than when I interviewed at Intercom.");
                 MainMenu.TypeWriter("As long as you were a white man you had no issues getting into Intercom, this felt like it might be quite different.");
                 Console.ResetColor();
-                MainMenu.TypeWriter($"Alright {Player.Name} ");
+                MainMenu.TypeWriter($"Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                MainMenu.TypeWriter("Finally I could be alone for a few minutes.");
+                MainMenu.TypeWriter("Strange, I feel I can hear whispering coming form inside the room. Or someone looking at me.");
+                MainMenu.TypeWriter("Or that someone is standing awfully close to me. Scanning the room, I see nothing.");
+                MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.");
+                Console.ForegroundColor = ConsoleColor.Red;
+                MainMenu.TypeWriter("Open the door?");
+                MainMenu.TypeWriter("Yes or no?");
+                string OpenTheDoor = Console.ReadLine();
+
+                if (OpenTheDoor == "yes" | OpenTheDoor == "Yes" | OpenTheDoor == "y")
+                {
+                    JohnInterview.JohnInterviewLevel();
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    MainMenu.TypeWriter("You go and sit back down on the seat. Shaking your head at the ridiculousness of your feelings and anxiety.");
+                    MainMenu.TypeWriter("How silly you think, this is just an interview and my nerves are getting to me.");
+                    MainMenu.TypeWriter("Glancing back at the door you think you notice some vapour coming in at the bottom.");
+                    MainMenu.TypeWriter("Hmm. There'sthat smell of chlorine again.");
+                    MainMenu.TypeWriter("You suddenyl realize wahts happening. But its too late.");
+                    MainMenu.TypeWriter("You died of poisoning.");
+                    MainMenu.TypeWriter(@"   ____    _    __  __ _____    _____     _______ ____  
+                                        / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \ 
+                                        | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |
+                                        | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ < 
+                                        \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\");
+                    MainMenu.TypeWriter("");
+                    MainMenu.TypeWriter("");
+
+                    Console.ResetColor();
+                    MainMenu.Menu();
+                }
 
 
             }
