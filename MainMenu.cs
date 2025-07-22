@@ -86,7 +86,7 @@ namespace TextRPG
                         ResumeGame();
                         break;
                     case "4":
-                        TypeWriter("Steph is probably reading this and shes knows all about me.");
+                        About.AboutInfo();
                         continue;
                     case "5":
                         TypeWriter("See ya later alligator!");

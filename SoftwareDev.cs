@@ -115,6 +115,14 @@ namespace TextRPG
             if (excitedAnswer == "Yes" | excitedAnswer == "Y" | excitedAnswer == "yes")
             {
                 MainMenu.TypeWriter("Hmm...you really don't look it.");
+                MainMenu.TypeWriter("Nevermind, not like you can leave any time you want. Which you can of course.");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                MainMenu.TypeWriter("Gene was still smiling. It was as if he had been starting past me the entire time.");
+                MainMenu.TypeWriter("I could feel sweat start to gather on my brow, I didn't want to wipe it away and hoped he couldn't see it.");
+                MainMenu.TypeWriter("So far this process has been quite different than when I interviewed at Intercom.");
+                MainMenu.TypeWriter("As long as you were a white man you had no issues getting into Intercom, this felt like it might be quite different.");
+                Console.ResetColor();
+                MainMenu.TypeWriter($"Alright {Player.Name} ");
 
 
             }
@@ -124,9 +132,16 @@ namespace TextRPG
                 MainMenu.TypeWriter("Well how aboiut I shoot you in the face? How is that huh?");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 MainMenu.TypeWriter("Gene shot you in the face. You Died.");
-                MainMenu.TypeWriter("GAME OVER");
-                Console.ResetColor(); 
-                MainMenu.Menu(); 
+                MainMenu.TypeWriter(@"   ____    _    __  __ _____    _____     _______ ____  
+                                        / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \ 
+                                        | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |
+                                        | |_| |/ ___ \| |  | | |___  | |_| |\ V / | |___|  _ < 
+                                        \____/_/   \_\_|  |_|_____|  \___/  \_/  |_____|_| \_\");
+                MainMenu.TypeWriter("");
+                MainMenu.TypeWriter("");
+
+                Console.ResetColor();
+                MainMenu.Menu();
             }
 
 
