@@ -85,7 +85,7 @@ namespace TextRPG
                     }
 
 
-                    SWERoundOne();
+                    SWERoundOne(dev);
                    }
 
                 else
@@ -100,7 +100,7 @@ namespace TextRPG
             }
 
         }
-         public static SoftwareDev SWERoundOne() {
+         public static SoftwareDev SWERoundOne(SoftwareDev dev) {
 
             MainMenu.TypeWriter("Wow you look like a strong candidate.");
             MainMenu.TypeWriter("Lets get into it. There will be 3 Rounds of interviews.");
@@ -136,7 +136,7 @@ namespace TextRPG
 
                 if (OpenTheDoor == "yes" | OpenTheDoor == "Yes" | OpenTheDoor == "y")
                 {
-                    JohnInterview.JohnInterviewLevel();
+                    JohnInterview.JohnInterviewLevel(dev);
                 }
                 else
                 {

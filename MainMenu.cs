@@ -122,7 +122,8 @@ private static void ResumeGame()
     switch (progress.CurrentStage)
     {
         case "SWE_Round1":
-            SoftwareDev.SWERoundOne();
+            var dev = new SoftwareDev();
+            SoftwareDev.SWERoundOne(dev);
             break;
         default:
             TypeWriter("Saved stage not recognized.");
