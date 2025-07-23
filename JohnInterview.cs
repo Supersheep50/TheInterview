@@ -43,7 +43,7 @@ namespace TextRPG
             Console.ResetColor();
             MainMenu.TypeWriter("We shall fight to the death.");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            MainMenu.TypeWriter("Yes I heard that but bit but what does it mean?");
+            MainMenu.TypeWriter("Yes I heard that bit but what does it mean?");
             Console.ForegroundColor = ConsoleColor.White;
             MainMenu.TypeWriter("It means exactly what it means. One of us will perish, you most likely.");
             MainMenu.TypeWriter("Now, no more nonsense let us begin.");
@@ -59,13 +59,15 @@ namespace TextRPG
             {
                 currentPlayer.ProblemSolving += 10;
                 MainMenu.TypeWriter("Wow, I'm impressed. 10 points for Grffindor.");
-                MainMenu.TypeWriter($"currentPlayer.ProblemSolving");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 MainMenu.TypeWriter("Oh dear. No. No that's wrong.");
-                MainMenu.TypeWriter($"{currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+
 
             }
 
@@ -81,13 +83,15 @@ namespace TextRPG
             {
                 currentPlayer.ProblemSolving += 10;
                 MainMenu.TypeWriter("I guess you only look like an idiot then.");
-                MainMenu.TypeWriter($"{currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 MainMenu.TypeWriter("No.");
-                MainMenu.TypeWriter($"{currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+
 
             }
 
@@ -102,13 +106,15 @@ namespace TextRPG
             {
                 currentPlayer.ProblemSolving += 10;
                 MainMenu.TypeWriter("Damn. Most get that wrong and I shoot them.");
-                MainMenu.TypeWriter($"{currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is currently {currentPlayer.ProblemSolving}");
+
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 MainMenu.TypeWriter("Yeah that's not right chief.");
-                MainMenu.TypeWriter($"{currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Your Problem Solving skill level is currently {currentPlayer.ProblemSolving}");
+
 
             }
 
@@ -208,6 +214,38 @@ namespace TextRPG
             MainMenu.TypeWriter("Not eat your actual...you know what I mean.");
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("Oh. That's not much better really.");
+            MainMenu.TypeWriter("Taking a step back I was suddenly against the back wall. John seemed to be gearing up to do something, what I was wasn't sure.");
+            MainMenu.TypeWriter("Without warning he started firing VHS tapes towards me at lightning speed.");
+            Console.ResetColor();
+            MainMenu.TypeWriter("These are HR training videos from the 90s....feel the drabness and power overtake you.");
+            MainMenu.TypeWriter("No one can stand them muhahahaha!");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            MainMenu.TypeWriter("You entered into battle with John.");
+            MainMenu.TypeWriter("What would you like to do?");
+            Console.ForegroundColor = ConsoleColor.Red;
+            MainMenu.TypeWriter("1. Player Stats 2. Inventory 3.Attack");
+            string playerSelect = Console.ReadLine();
+
+            if (playerSelect == "1")
+            {
+                MainMenu.TypeWriter($"\nTitle: {currentPlayer.Title}");
+                MainMenu.TypeWriter($"Health: {currentPlayer.Health}");
+                MainMenu.TypeWriter($"Typing: {currentPlayer.Typing}");
+                MainMenu.TypeWriter($"Problem Solving: {currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter($"Smugness: {currentPlayer.Smugness}");
+            }
+            else if (playerSelect == "2")
+            {
+                MainMenu.TypeWriter("Inventory is empty.");
+
+            }
+            else
+            {
+                currentPlayer.Attack();
+            }
+
+            
+
 
 
         }
