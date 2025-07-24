@@ -1,0 +1,17 @@
+body {
+    background-color: #121212;
+    color: #eee;
+    font-family: monospace;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero img {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+a {
+    color: #00ffcc;
+    font-size: 1.2rem;
+}
