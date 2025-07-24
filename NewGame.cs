@@ -82,6 +82,7 @@ namespace TextRPG
                 MainMenu.TypeWriter("Well if you're not going to even do the interview it makes the game pretty pointless.");
                 MainMenu.TypeWriter("Here, you can go here instead.");
                 OpenUrl("https://www.google.com/search?q=bin+image&sca_esv=df549bc08c278101&rlz=1C5CHFA_enIE1117IE1117&udm=2&biw=1633&bih=886&sxsrf=AE3TifNkVqlKAPhW6V1m4K5SzGuMfs7jdA%3A1753353245970&ei=HQyCaIH-Op6QhbIP-IS2KQ&ved=0ahUKEwjBgJHrpdWOAxUeSEEAHXiCLQUQ4dUDCBE&uact=5&oq=bin+image&gs_lp=EgNpbWciCWJpbiBpbWFnZTINEAAYgAQYsQMYQxiKBTIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIMEAAYgAQYQxiKBRgKMhAQABiABBixAxhDGIMBGIoFMg0QABiABBixAxhDGIoFSIIKUJcFWKMJcAF4AJABAJgBAKABAKoBALgBA8gBAPgBAZgCAaACB5gDAIgGAZIHATGgBwCyBwC4BwDCBwMyLTHIBwU&sclient=img");
+                 Environment.Exit(0);
             }
 
 
@@ -96,6 +97,7 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("You finally stop climbing the stairs after what feels like an enternity.");
             MainMenu.TypeWriter("Gene brings you out into an open floor with cubicle after cublice. You squint your eyes.");
+            Console.ResetColor();
             Console.WriteLine(@"                _________________
                                                     /                /|
                                                     /                / |
@@ -128,6 +130,7 @@ namespace TextRPG
                                         |                            |           oo
                                         |____________________________________|
                                         ------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("It looks like they go on forever and ever. But that doesn't make sense?");
             MainMenu.TypeWriter("You finally arrive at the interview room.");
             MainMenu.TypeWriter("You sit down on an old plastic chair in a room that has windows on all sides.");

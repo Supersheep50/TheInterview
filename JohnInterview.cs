@@ -125,7 +125,7 @@ namespace TextRPG
             MainMenu.TypeWriter("He burst out of his shirt and started to grow towards the ceiling like some sort of weird gross HR sunflower.");
             MainMenu.TypeWriter("Within seconds he took up half of the room.");
             Console.ResetColor();
-            Console.WriteLine(@"Troll by lgbeard
+            MainMenu.TypeWriter(@"Troll by lgbeard
                              . `  `. .`  ` .
                         . `     `.  ;  .`     ` .
                      .`           \   /           `.
