@@ -21,9 +21,12 @@ namespace TextRPG
 
             while (true)
             {
-                MainMenu.TypeWriter("Software Dev Path has been chosen! Sorry that was a bit dramatic...");
-                MainMenu.TypeWriter("Alright then, lets hear about some of your skills.");
-                MainMenu.TypeWriter("You have 100 attribute points. Please assign them to these 3 skills.");
+                MainMenu.TypeWriter("Gene: Software Dev Path has been chosen! Sorry that was a bit dramatic...");
+                MainMenu.TypeWriter("Gene: So you like Anime eh? Have you ever showered? Sorry I can't think of any other stereotypes....");
+                MainMenu.TypeWriter("Gene: I'm in HR we're allowed say that. We can also sleep with the CEO.");
+                MainMenu.TypeWriter("Gene: Actually are you a Coldplay fan? Nevermind.");
+                MainMenu.TypeWriter("Gene: Alright then, lets hear about some of your skills.");
+                MainMenu.TypeWriter("Gene: You have 100 attribute points. Please assign them to these 3 skills.");
                 MainMenu.TypeWriter("1.Typing 2.Problem Solving 3.Smugness");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("How many points would you like to assign to Typing?");
@@ -42,6 +45,13 @@ namespace TextRPG
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     MainMenu.TypeWriter("\nPlayer Created!");
+                    MainMenu.TypeWriter("Mysterious Voice: Go forth young candidate and save the universe. We need you.");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    MainMenu.TypeWriter("You: What do you mean save the universe? I'm just here for a job interview. Who's speaking?");
+                    MainMenu.TypeWriter("You: This has been a super weird experience so far.");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    MainMenu.TypeWriter("Mysterious Voice: Oh uhh...nevermind me. Off you pop...💨");
+
                     Console.ResetColor();
 
                     MainMenu.TypeWriter($"\nTitle: {dev.Title}");
@@ -102,7 +112,7 @@ namespace TextRPG
         }
          public static SoftwareDev SWERoundOne(SoftwareDev dev) {
 
-            MainMenu.TypeWriter("Wow you look like a strong candidate.");
+            MainMenu.TypeWriter("Gene: Wow you look like a strong candidate.");
             MainMenu.TypeWriter("Lets get into it. There will be 3 Rounds of interviews.");
             MainMenu.TypeWriter("Round 1 is with John, he's our HR guy. Loves to chat.");
             MainMenu.TypeWriter("Next up is Sheila, shes our Engineering Lead and has been here an eternity.");

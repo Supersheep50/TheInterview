@@ -66,6 +66,7 @@ namespace TextRPG
                 TypeWriter("Welcome to The Interview!");
                 TypeWriter("This is a Text Based RPG adventure where you play a poor lowly candidate");
                 TypeWriter("Your goal is to get the job of your dreams at NotMeta Corp");
+                TypeWriter("But proceed with caution....");
                 TypeWriter("Good luck!");
                 Console.WriteLine();
                 Console.WriteLine();
