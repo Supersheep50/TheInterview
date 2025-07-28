@@ -25,17 +25,28 @@ namespace TextRPG
                 MainMenu.TypeWriter("Gene: So you like Anime eh? Have you ever showered? Sorry I can't think of any other stereotypes....");
                 MainMenu.TypeWriter("Gene: I'm in HR we're allowed say that. We can also sleep with the CEO.");
                 MainMenu.TypeWriter("Gene: Actually are you a Coldplay fan? Nevermind.");
+                Console.WriteLine("");
                 MainMenu.TypeWriter("Gene: Alright then, lets hear about some of your skills.");
                 MainMenu.TypeWriter("Gene: You have 100 attribute points. Please assign them to these 3 skills.");
-                MainMenu.TypeWriter("1.Typing 2.Problem Solving 3.Smugness");
+                Console.WriteLine("");
+
+                MainMenu.TypeWriter("1.Typing ");
+                MainMenu.TypeWriter("2.Problem Solving ");
+                MainMenu.TypeWriter("3.Smugness");
+
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("How many points would you like to assign to Typing?");
+                Console.WriteLine(">>");
                 dev.Typing = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
                 Console.WriteLine("How many points would you like to assign to Problem Solving?");
+                Console.WriteLine(">>");
                 dev.ProblemSolving = int.Parse(Console.ReadLine());
+                Console.WriteLine("");
                 Console.WriteLine("How many points would you like to assign to Smugness?");
+                Console.WriteLine(">>");
                 dev.Smugness = int.Parse(Console.ReadLine());
-
+                Console.WriteLine("");
                 Console.ResetColor();
 
                 int total = dev.Typing + dev.ProblemSolving + dev.Smugness;
@@ -46,9 +57,13 @@ namespace TextRPG
                     Console.ForegroundColor = ConsoleColor.Green;
                     MainMenu.TypeWriter("\nPlayer Created!");
                     MainMenu.TypeWriter("Mysterious Voice: Go forth young candidate and save the universe. We need you.");
+                    Console.WriteLine("");
+
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     MainMenu.TypeWriter("You: What do you mean save the universe? I'm just here for a job interview. Who's speaking?");
                     MainMenu.TypeWriter("You: This has been a super weird experience so far.");
+                    Console.WriteLine("");
+
                     Console.ForegroundColor = ConsoleColor.Green;
                     MainMenu.TypeWriter("Mysterious Voice: Oh uhh...nevermind me. Off you pop...💨");
 
@@ -66,6 +81,8 @@ namespace TextRPG
                     };
 
                     MainMenu.TypeWriter("Alright well before we get too deep into this shizzle, maybe you should save your progress?");
+                    Console.WriteLine("");
+
                     MainMenu.TypeWriter("Would you like to:");
                     MainMenu.TypeWriter("1. Save and continue");
                     MainMenu.TypeWriter("2. Save and exit to main menu");
@@ -118,8 +135,12 @@ namespace TextRPG
             MainMenu.TypeWriter("Next up is Sheila, shes our Engineering Lead and has been here an eternity.");
             MainMenu.TypeWriter("Finally, you'll meet Galgomel, harbinger of souls. He's a PM");
             MainMenu.TypeWriter("Excited?");
+            Console.WriteLine("");
+
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please enter Yes or No");
+            Console.WriteLine(">>");
+
             string excitedAnswer = Console.ReadLine();
             Console.ResetColor();
 
@@ -128,20 +149,30 @@ namespace TextRPG
                 MainMenu.TypeWriter("Hmm...you really don't look it.");
                 MainMenu.TypeWriter("Nevermind, not like you can leave any time you want. Which of course you can");
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("");
+
                 MainMenu.TypeWriter("Gene was still smiling. It was as if he had been staring past me the entire time.");
                 MainMenu.TypeWriter("I could feel sweat start to gather on my brow, I didn't want to wipe it away and hoped he couldn't see it.");
                 MainMenu.TypeWriter("So far this process has been quite different than when I interviewed at Intercom.");
                 MainMenu.TypeWriter("As long as you were a white man you had no issues getting into Intercom, this felt like it might be quite different.");
+                Console.WriteLine("");
+
                 Console.ResetColor();
                 MainMenu.TypeWriter($"Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("");
+
                 MainMenu.TypeWriter("Finally I could be alone for a few minutes.");
                 MainMenu.TypeWriter("Strange, I feel I can hear whispering coming from inside the room. Or someone looking at me.");
                 MainMenu.TypeWriter("Or that someone is standing awfully close to me. Scanning the room, I see nothing.");
                 MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.");
                 Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("");
+
                 MainMenu.TypeWriter("Open the door?");
                 MainMenu.TypeWriter("Yes or no?");
+                Console.WriteLine(">>");
+
                 string OpenTheDoor = Console.ReadLine();
 
                 if (OpenTheDoor == "yes" | OpenTheDoor == "Yes" | OpenTheDoor == "y")
@@ -155,8 +186,12 @@ namespace TextRPG
                     MainMenu.TypeWriter("How silly you think, this is just an interview and my nerves are getting to me.");
                     MainMenu.TypeWriter("Glancing back at the door you think you notice some vapour coming in at the bottom.");
                     MainMenu.TypeWriter("Hmm. There'sthat smell of chlorine again.");
+                    Console.WriteLine("");
+
                     MainMenu.TypeWriter("You suddenyl realize wahts happening. But its too late.");
                     MainMenu.TypeWriter("You died of poisoning.");
+                    Console.WriteLine("");
+
                     MainMenu.TypeWriter(@"   ____    _    __  __ _____    _____     _______ ____  
                                         / ___|  / \  |  \/  | ____|  / _ \ \   / / ____|  _ \ 
                                         | |  _  / _ \ | |\/| |  _|   | | | \ \ / /|  _| | |_) |

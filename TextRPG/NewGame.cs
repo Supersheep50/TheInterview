@@ -2,6 +2,8 @@ using System.Net;
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Drawing;
+using Spectre.Console; 
 
 namespace TextRPG
 {
@@ -11,7 +13,7 @@ namespace TextRPG
         public static void PlayerSelection()
         {
 
-
+            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine(
 "                              d8888888888888888888888\" \n" +
 "                                888888888888888888PYP\"' \n" +
@@ -59,6 +61,9 @@ namespace TextRPG
             MainMenu.TypeWriter("This is why you went through 4 years of University. To finally get to this point.");
             MainMenu.TypeWriter("To be able to work 40 hours a week until you're dead. What an honour.");
             MainMenu.TypeWriter("To have your own cubicle, potlucks, pizza days and company offsites.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
             MainMenu.TypeWriter("Everything you've dreamed of. The grey shade of the building reflects in your eyes.");
             MainMenu.TypeWriter("The words NotMeta shimmer from the sign. It makes you smile.");
             MainMenu.TypeWriter("Who cares if the CEO is a convicted sex offender and right wing supporter.");
@@ -66,11 +71,15 @@ namespace TextRPG
             MainMenu.TypeWriter("You arrive at the large double doors. Should you go in and do the interview?");
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please enter Yes or No");
+            Console.Write(">> ");
+
             string startGame = Console.ReadLine();
 
             if (startGame == "Yes" | startGame == "yes" | startGame == "y")
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("");
+                Console.WriteLine("");
                 MainMenu.TypeWriter("The door pushes open very slowly. It feels heavy and weirdly warm.");
                 MainMenu.TypeWriter("Standing in the large very empty lobby, you hear Machine Gun Kelly playing on the speakers.");
                 MainMenu.TypeWriter("You start to have regrets. Before you can leave a man sitting behind the desk spots you and walks towards you.");
@@ -96,7 +105,7 @@ namespace TextRPG
             MainMenu.TypeWriter("Weird dude: No one died if that's what you're thinking.");
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("You finally stop climbing the stairs after what feels like an enternity.");
-            MainMenu.TypeWriter("Gene brings you out into an open floor with cubicle after cublice. You squint your eyes.");
+            MainMenu.TypeWriter("Gene brings you out into an open floor with cubicle after cubicle. You squint your eyes.");
             Console.ResetColor();
             Console.WriteLine(@"                _________________
                                                     /                /|
@@ -130,13 +139,18 @@ namespace TextRPG
                                         |                            |           oo
                                         |____________________________________|
                                         ------------------------------------------------");
+
+
+            Console.WriteLine("\nPress ENTER to continue...");
+            Console.ReadLine();
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("It looks like they go on forever and ever. But that doesn't make sense?");
             MainMenu.TypeWriter("You finally arrive at the interview room.");
             MainMenu.TypeWriter("You sit down on an old plastic chair in a room that has windows on all sides.");
             MainMenu.TypeWriter("Across from the steel metallic desk is Gene, the coordinator.");
             Console.ResetColor();
-            Console.WriteLine(@"    
+            MainMenu.TypeWriter(@"    
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
  XXXXXXXXXXXXXXXXXX         XXXXXXXX
 XXXXXXXXXXXXXXXX              XXXXXXX
@@ -154,21 +168,39 @@ XXXXXXXXXXXXX                   XXXXX
        \        \___,        /
          \                 /
           |\             /|
-          |  \_________/  |");
+          |  \_________/  |", 1);
+            Console.WriteLine("");
+            Console.WriteLine("");
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("He hasn't stopped smiling since you met him. He hasn't blinked either come to think of it.");
             MainMenu.TypeWriter("He starts to arrange the pieces of paper he's brought with him. You get a quick glance, they're all blank.");
             MainMenu.TypeWriter("He turns to face you and takes a breath. The room smells like chlorine.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
             Console.ResetColor();
             MainMenu.TypeWriter("Gene: My name is Gene. I'm the Interview Coordinator here at NotMeta and a pyscopath.");
-            MainMenu.TypeWriter("Gene: Haha thats just one of my jokes. You'll get used to them. Probably.");
+            AnsiConsole.Markup("[bold cyan]Gene:[/] [magenta]Haha![/] That's just one of my [yellow]jokes[/]. You'll get used to them. Probably.");
+                Console.WriteLine("");
+
             MainMenu.TypeWriter("Gene: Lets take a look at this CV....");
             Player.PlayerName();
             MainMenu.TypeWriter($"Gene: Alright, I'll call you {Player.Name} if you insist");
             MainMenu.TypeWriter($"Gene: Now {Player.Name}, what role are you here to interview for?");
-            MainMenu.TypeWriter("1.Software Development 2.Recruitment 3.Sales 4.CEO");
+            Console.WriteLine("");
+
+            MainMenu.TypeWriter("1.Software Development");
+            MainMenu.TypeWriter("2.Recruitment ");
+            MainMenu.TypeWriter("3.Sales ");
+            MainMenu.TypeWriter("4.CEO");
+
+            Console.WriteLine("");
+
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please choose an option");
+            Console.Write(">> ");
+
             string jobChoice = Console.ReadLine();
             Console.ResetColor();
 

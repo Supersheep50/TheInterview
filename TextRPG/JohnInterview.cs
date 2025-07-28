@@ -203,7 +203,7 @@ namespace TextRPG
  \ | \ | |  \\\|  \ .`-_ // \ \ .-\  // -./ / \\ _-`.  \ | |  / / | \
  / \ / \ |  //|\  .`,`__//___\ \__/   \__/ /___\\__`,`. |/ \ / | /  |
  \ |/  |/  |/ |/ /_-_--_--_---,--.`) (`,--.---_--_--_-_\\|  \| \/   \
- / \|  /   /\ /\(_`'_`'_`'_) (____)   (____) (_`'_`'_`'_)/  /\  |LGB/");
+ / \|  /   /\ /\(_`'_`'_`'_) (____)   (____) (_`'_`'_`'_)/  /\  |LGB/", 5);
 
             MainMenu.TypeWriter("Ah thats much better. You should always bring your true self to work I say.");
             MainMenu.TypeWriter("Now if you don't mind, I'd love to eat you whole.");

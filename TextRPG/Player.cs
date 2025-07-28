@@ -30,6 +30,7 @@ namespace TextRPG
             MainMenu.TypeWriter("Huh, I can see why the Hiring Manager wanted to talk to you. Is this your real name?");
             Console.ForegroundColor = ConsoleColor.Red;
             MainMenu.TypeWriter("Please enter your name");
+            Console.Write(">> ");
             Name = Console.ReadLine();
             Console.ResetColor();
     
