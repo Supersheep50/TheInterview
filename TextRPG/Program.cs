@@ -1,21 +1,19 @@
 ﻿using System;
 
-
-
-namespace TextRPG {
-    
-
-
-class Program
+namespace TextRPG
 {
-
-    static void Main(string[] args)
+    class Program
     {
+        static void Main(string[] args)
+        {
+            // Start music in background
+            MusicPlayer.PlayLoopingMusic("music/leavinghome.wav");
 
-        MainMenu.Menu();
-        
+            // Launch the main menu
+            MainMenu.Menu();
 
-
+            // Keeps the app alive in case needed
+            Console.ReadLine();
+        }
     }
-}
 }
