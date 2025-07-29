@@ -21,6 +21,9 @@ namespace TextRPG
 
             while (true)
             {
+                Console.WriteLine("");
+                Console.WriteLine("");
+
                 MainMenu.TypeWriter("Gene: Software Dev Path has been chosen! Sorry that was a bit dramatic...");
                 MainMenu.TypeWriter("Gene: So you like Anime eh? Have you ever showered? Sorry I can't think of any other stereotypes....");
                 MainMenu.TypeWriter("Gene: I'm in HR we're allowed say that. We can also sleep with the CEO.");
@@ -33,6 +36,8 @@ namespace TextRPG
                 MainMenu.TypeWriter("1.Typing ");
                 MainMenu.TypeWriter("2.Problem Solving ");
                 MainMenu.TypeWriter("3.Smugness");
+                Console.WriteLine("");
+                Console.WriteLine("");
 
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("How many points would you like to assign to Typing?");
@@ -54,8 +59,15 @@ namespace TextRPG
 
                 if (total == 100)
                 {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                   Console.WriteLine(@"
+                            +----------------------+
+                            |  🧙 Player Created! 🗡️ |
+                            +----------------------+
+                            ");
+                    Console.WriteLine("");
+
                     Console.ForegroundColor = ConsoleColor.Green;
-                    MainMenu.TypeWriter("\nPlayer Created!");
                     MainMenu.TypeWriter("Mysterious Voice: Go forth young candidate and save the universe. We need you.");
                     Console.WriteLine("");
 
@@ -67,6 +79,8 @@ namespace TextRPG
                     Console.ForegroundColor = ConsoleColor.Green;
                     MainMenu.TypeWriter("Mysterious Voice: Oh uhh...nevermind me. Off you pop...💨");
 
+                    Console.WriteLine("\nPress ENTER to continue...");
+                    Console.ReadLine();
                     Console.ResetColor();
 
                     MainMenu.TypeWriter($"\nTitle: {dev.Title}");
@@ -79,7 +93,7 @@ namespace TextRPG
                         Player = dev,
                         CurrentStage = "SWE_Round1"
                     };
-
+                    Console.WriteLine("");
                     MainMenu.TypeWriter("Alright well before we get too deep into this shizzle, maybe you should save your progress?");
                     Console.WriteLine("");
 
@@ -130,11 +144,12 @@ namespace TextRPG
          public static SoftwareDev SWERoundOne(SoftwareDev dev) {
 
             MainMenu.TypeWriter("Gene: Wow you look like a strong candidate.");
-            MainMenu.TypeWriter("Lets get into it. There will be 3 Rounds of interviews.");
-            MainMenu.TypeWriter("Round 1 is with John, he's our HR guy. Loves to chat.");
-            MainMenu.TypeWriter("Next up is Sheila, shes our Engineering Lead and has been here an eternity.");
-            MainMenu.TypeWriter("Finally, you'll meet Galgomel, harbinger of souls. He's a PM");
-            MainMenu.TypeWriter("Excited?");
+            MainMenu.TypeWriter("Gene: You might last longer than the last candidate, god rest her soul.");
+            MainMenu.TypeWriter("Gene: Anyway, lets get into it. There will be 3 Rounds of interviews.");
+            MainMenu.TypeWriter("Gene: Round 1 is with John, he's our HR guy. Loves to chat.");
+            MainMenu.TypeWriter("Gene: Next up is Sheila, shes our Engineering Lead and has been here an eternity.");
+            MainMenu.TypeWriter("Gene: Finally, you'll meet Galgomel, harbinger of souls. He's a PM");
+            MainMenu.TypeWriter("Gene: Excited?");
             Console.WriteLine("");
 
             Console.ForegroundColor = ConsoleColor.Red;
@@ -146,8 +161,8 @@ namespace TextRPG
 
             if (excitedAnswer == "Yes" | excitedAnswer == "Y" | excitedAnswer == "yes")
             {
-                MainMenu.TypeWriter("Hmm...you really don't look it.");
-                MainMenu.TypeWriter("Nevermind, not like you can leave any time you want. Which of course you can");
+                MainMenu.TypeWriter("Gene: Hmm...you really don't look it.");
+                MainMenu.TypeWriter("Gene: Nevermind, not like you can leave any time you want. Which of course you can");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("");
 
@@ -158,13 +173,16 @@ namespace TextRPG
                 Console.WriteLine("");
 
                 Console.ResetColor();
-                MainMenu.TypeWriter($"Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
+                MainMenu.TypeWriter($"Gene: Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
+                MainMenu.TypeWriter("If I were you I wouldn't go anywhere. Although if I were you I'd wouldn't here in the first place.");
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("");
 
                 MainMenu.TypeWriter("Finally I could be alone for a few minutes.");
-                MainMenu.TypeWriter("Strange, I feel I can hear whispering coming from inside the room. Or someone looking at me.");
-                MainMenu.TypeWriter("Or that someone is standing awfully close to me. Scanning the room, I see nothing.");
+                MainMenu.TypeWriter("Maybe it's just this Gene guy that's throwing me off? ");
+                MainMenu.TypeWriter("Strange though, I feel like I can hear whispering coming from inside the room. Or someone looking at me?", 10);
+                MainMenu.TypeWriter("Or wait...is someone standing awfully close to me. Scanning the room, I see nothing.", 10);
+                MainMenu.TypeWriter("..........");
                 MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("");

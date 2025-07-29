@@ -12,7 +12,8 @@ namespace TextRPG
         public static void Save()
         {
             if (GameState.CurrentProgress == null || GameState.CurrentProgress.Player == null)
-            {
+            {   
+                Console.WriteLine("");
                 MainMenu.TypeWriter("Nothing to save yet silly.");
                 Console.WriteLine("");
 
@@ -27,8 +28,11 @@ namespace TextRPG
 
             string json = JsonSerializer.Serialize(GameState.CurrentProgress, options);
             File.WriteAllText(SaveFilePath, json);
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Green;
             MainMenu.TypeWriter("Game saved successfully");
-                Console.WriteLine("");
+            Console.ResetColor();
+            Console.WriteLine("");
 
         }
         public static void Load()

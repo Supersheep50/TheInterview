@@ -187,6 +187,9 @@ XXXXXXXXXXXXX                   XXXXX
             MainMenu.TypeWriter("Gene: Lets take a look at this CV....");
             Player.PlayerName();
             MainMenu.TypeWriter($"Gene: Alright, I'll call you {Player.Name} if you insist");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
             MainMenu.TypeWriter($"Gene: Now {Player.Name}, what role are you here to interview for?");
             Console.WriteLine("");
 
