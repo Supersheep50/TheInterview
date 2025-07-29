@@ -161,6 +161,7 @@ namespace TextRPG
 
             if (excitedAnswer == "Yes" | excitedAnswer == "Y" | excitedAnswer == "yes")
             {
+                Console.WriteLine("");
                 MainMenu.TypeWriter("Gene: Hmm...you really don't look it.");
                 MainMenu.TypeWriter("Gene: Nevermind, not like you can leave any time you want. Which of course you can");
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -174,16 +175,19 @@ namespace TextRPG
 
                 Console.ResetColor();
                 MainMenu.TypeWriter($"Gene: Alright {Player.Name} I think its time for you to meet with John. Please wait here.");
-                MainMenu.TypeWriter("If I were you I wouldn't go anywhere. Although if I were you I'd wouldn't here in the first place.");
+                MainMenu.TypeWriter("Gene: If I were you I wouldn't go anywhere. Although if I were you I'd wouldn't here in the first place.");
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("");
+                Console.WriteLine("\nPress ENTER to relax...");
+                Console.ReadLine();
                 Console.WriteLine("");
 
                 MainMenu.TypeWriter("Finally I could be alone for a few minutes.");
                 MainMenu.TypeWriter("Maybe it's just this Gene guy that's throwing me off? ");
-                MainMenu.TypeWriter("Strange though, I feel like I can hear whispering coming from inside the room. Or someone looking at me?", 10);
-                MainMenu.TypeWriter("Or wait...is someone standing awfully close to me. Scanning the room, I see nothing.", 10);
-                MainMenu.TypeWriter("..........");
-                MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.");
+                MainMenu.TypeWriter("Strange though, I feel like I can hear whispering coming from inside the room. Or someone looking at me?", 50);
+                MainMenu.TypeWriter("Or wait...is someone standing awfully close to me? Scanning the room, I see nothing.", 50);
+                MainMenu.TypeWriter("..........", 60);
+                MainMenu.TypeWriter("Maybe, I should try the door? Just so I know in my own mind I can leave. I could be really quiet.", 60);
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("");
 
@@ -203,10 +207,10 @@ namespace TextRPG
                     MainMenu.TypeWriter("You go and sit back down on the seat. Shaking your head at the ridiculousness of your feelings and anxiety.");
                     MainMenu.TypeWriter("How silly you think, this is just an interview and my nerves are getting to me.");
                     MainMenu.TypeWriter("Glancing back at the door you think you notice some vapour coming in at the bottom.");
-                    MainMenu.TypeWriter("Hmm. There'sthat smell of chlorine again.");
+                    MainMenu.TypeWriter("Hmm. There's that smell of chlorine again....");
                     Console.WriteLine("");
 
-                    MainMenu.TypeWriter("You suddenyl realize wahts happening. But its too late.");
+                    MainMenu.TypeWriter("You suddenyl realize whats happening. But its too late.");
                     MainMenu.TypeWriter("You died of poisoning.");
                     Console.WriteLine("");
 
@@ -226,8 +230,8 @@ namespace TextRPG
             }
             else
             {
-                MainMenu.TypeWriter("Oh wow. Honesty the best policy eh?");
-                MainMenu.TypeWriter("Well how aboiut I shoot you in the face? How is that huh?");
+                MainMenu.TypeWriter("Gene: Oh wow. Honesty the best policy eh?");
+                MainMenu.TypeWriter("Gene: Well how aboiut I shoot you in the face? How is that huh?");
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 MainMenu.TypeWriter("Gene shot you in the face. You Died.");
                 MainMenu.TypeWriter(@"   ____    _    __  __ _____    _____     _______ ____  

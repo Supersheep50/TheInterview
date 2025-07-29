@@ -8,16 +8,19 @@ namespace TextRPG
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine();
-            MainMenu.TypeWriter("You stand up and walk towards the door.", 10);
-            MainMenu.TypeWriter("It's as if the whispering gets louder and louder the closer you get to it.", 10);
-            MainMenu.TypeWriter("Reaching your hand out towards the door handle you can already feel the cold eminating from it.", 10);
-            MainMenu.TypeWriter("......", 10);
-            MainMenu.TypeWriter("Before you can open it the door whooshes open");
+            MainMenu.TypeWriter("You stand up and walk towards the door.", 50);
+            MainMenu.TypeWriter("It's as if the whispering gets louder and louder the closer you get to it.", 50);
+            MainMenu.TypeWriter("Reaching your hand out towards the door handle you can already feel the cold eminating from it.", 50);
+            MainMenu.TypeWriter("......", 80);
+            MainMenu.TypeWriter("Before you can pull down on the handle, the door whooshes open");
             MainMenu.TypeWriter("Standing in the doorway is John.");
             Console.ResetColor();
             Console.WriteLine("\nPress ENTER to open your eyes...");
             Console.ReadLine();
-            Console.WriteLine(@"Art by Elissa Potier
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Console.WriteLine(@"
       ////^\\\\
       | ^   ^ |
      @ (o) (o) @
@@ -45,7 +48,8 @@ namespace TextRPG
             MainMenu.TypeWriter("John: You will be asked 3 questions. For each question right you will gain 10 points for Problem Solving.");
             MainMenu.TypeWriter("John: For every question you get wrong, you will lose 10 points. After that, we shall fight to the death.");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            MainMenu.TypeWriter("Excuse me?");
+            Console.WriteLine("");
+            MainMenu.TypeWriter("You: Excuse me?");
             Console.WriteLine("");
 
             Console.ResetColor();
@@ -53,14 +57,18 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("");
 
-            MainMenu.TypeWriter("John: Yes I heard that bit but what does it mean?");
+            MainMenu.TypeWriter("You: Yes I heard that bit but what does it mean?");
+            Console.WriteLine("");
             Console.ForegroundColor = ConsoleColor.White;
             MainMenu.TypeWriter("John: It means exactly what it means. One of us will perish, you most likely.");
             MainMenu.TypeWriter("John: Now, no more nonsense let us begin.");
             Console.WriteLine("");
 
-            MainMenu.TypeWriter($"Your Problem Solving skill level is currently {currentPlayer.ProblemSolving}");
+            int level = currentPlayer.ProblemSolving;
+            string bar = new string('█', level / 10).PadRight(10, '░');
+            MainMenu.TypeWriter($"🧠 Problem Solving [{bar}] {level}/100");
             Console.WriteLine("");
+
 
             MainMenu.TypeWriter("What gets wetter the more you dry it?");
             Console.ForegroundColor = ConsoleColor.Red;
@@ -80,21 +88,27 @@ namespace TextRPG
             {
                 currentPlayer.ProblemSolving += 10;
                 Console.WriteLine("");
-                MainMenu.TypeWriter("Wow, I'm impressed. 10 points for Grffindor.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter("John: Wow, I'm impressed. 10 points for Grffindor.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
 
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 Console.WriteLine("");
-                MainMenu.TypeWriter("Oh dear. No. No that's wrong.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
+                MainMenu.TypeWriter("John: Oh dear. No. No that's wrong.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
 
 
             }
             Console.WriteLine("");
-            MainMenu.TypeWriter($"Alright then, here's Question 2. Listen up {Player.Name}.");
+            MainMenu.TypeWriter($"John: Alright then, here's Question 2. Listen up {Player.Name}.");
             Console.WriteLine("");
 
             MainMenu.TypeWriter("What has a neck but no head?");
@@ -106,6 +120,8 @@ namespace TextRPG
             MainMenu.TypeWriter("3. You");
 
             MainMenu.TypeWriter("Please choose an answer.");
+            MainMenu.TypeWriter(">>");
+
             string question2 = Console.ReadLine();
             Console.ResetColor();
 
@@ -113,21 +129,25 @@ namespace TextRPG
             {
                 currentPlayer.ProblemSolving += 10;
                 Console.WriteLine("");
-                MainMenu.TypeWriter("I guess you only look like an idiot then.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
-
+                MainMenu.TypeWriter("John: I guess you only look like an idiot then.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 Console.WriteLine("");
-                MainMenu.TypeWriter("No.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is now {currentPlayer.ProblemSolving}");
-
+                MainMenu.TypeWriter("John: No.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
 
             }
 
-            MainMenu.TypeWriter($"Last question {Player.Name}, don't mess it up. No multiple choice this time.");
+            MainMenu.TypeWriter($"John: Last question {Player.Name}, don't mess it up. No multiple choice this time.");
             Console.WriteLine("");
 
             MainMenu.TypeWriter("If 2 is company and 3 is a crowd, what are 4 and 5?");
@@ -142,18 +162,22 @@ namespace TextRPG
                 currentPlayer.ProblemSolving += 10;
                 Console.WriteLine("");
 
-                MainMenu.TypeWriter("Damn. Most get that wrong and I shoot them.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is currently {currentPlayer.ProblemSolving}");
-
+                MainMenu.TypeWriter("John: Damn. Most get that wrong and I shoot them.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
             }
             else
             {
                 currentPlayer.ProblemSolving -= 10;
                 Console.WriteLine("");
 
-                MainMenu.TypeWriter("Yeah that's not right chief.");
-                MainMenu.TypeWriter($"Your Problem Solving skill level is currently {currentPlayer.ProblemSolving}");
-
+                MainMenu.TypeWriter("John: Yeah that's not right chief.");
+                int newLevel = currentPlayer.ProblemSolving;
+                string newBar = new string('█', newLevel / 10).PadRight(10, '░');
+                MainMenu.TypeWriter($"🧠 Problem Solving [{newBar}] {newLevel}/100");
+                Console.WriteLine("");
 
             }
 
@@ -163,12 +187,12 @@ namespace TextRPG
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("John stood up and backed away from the table. ");
             MainMenu.TypeWriter("Suddenly he started to grow. Everywhere.");
-            MainMenu.TypeWriter("He burst out of his shirt and started to grow towards the ceiling like some sort of weird gross HR sunflower.");
+            MainMenu.TypeWriter("He burst out of his shirt and started to shape towards the ceiling like some sort of weird gross HR sunflower.");
             MainMenu.TypeWriter("Within seconds he took up half of the room.");
             Console.ResetColor();
             Console.WriteLine("\nPress ENTER to look up at John...");
             Console.ReadLine();
-            Console.WriteLine(@"Troll by lgbeard
+            Console.WriteLine(@"
                              . `  `. .`  ` .
                         . `     `.  ;  .`     ` .
                      .`           \   /           `.
@@ -259,7 +283,7 @@ namespace TextRPG
             Console.WriteLine("");
 
             Console.ForegroundColor = ConsoleColor.White;
-            MainMenu.TypeWriter("Monstor John: No no I said eat YOU WHOLE");
+            MainMenu.TypeWriter("Monstor John: No no I said eat YOU WHOLE!");
             MainMenu.TypeWriter("Monstor John: Not eat your actual...you know what I mean.");
             Console.WriteLine("");
 
@@ -291,16 +315,12 @@ namespace TextRPG
 
             if (playerSelect == "1")
             {
-                MainMenu.TypeWriter($"\nTitle: {currentPlayer.Title}");
-                MainMenu.TypeWriter($"Health: {currentPlayer.Health}");
-                MainMenu.TypeWriter($"Typing: {currentPlayer.Typing}");
-                MainMenu.TypeWriter($"Problem Solving: {currentPlayer.ProblemSolving}");
-                MainMenu.TypeWriter($"Smugness: {currentPlayer.Smugness}");
+                Player.DevPlayerStats(currentPlayer);
             }
             else if (playerSelect == "2")
             {
                 MainMenu.TypeWriter("Inventory is empty.");
-                
+
 
             }
             else

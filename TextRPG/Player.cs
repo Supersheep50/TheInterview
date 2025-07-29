@@ -33,9 +33,18 @@ namespace TextRPG
             Console.Write(">> ");
             Name = Console.ReadLine();
             Console.ResetColor();
-    
-        }
-    
 
+        }
+
+        public static void DevPlayerStats(Player currentPlayer)
+        {   
+
+            MainMenu.TypeWriter($"\nTitle: {currentPlayer.Title}");
+            MainMenu.TypeWriter($"Health: {currentPlayer.Health}");
+            MainMenu.TypeWriter($"Typing: {currentPlayer.Typing}");
+            MainMenu.TypeWriter($"Problem Solving: {currentPlayer.ProblemSolving}");
+            MainMenu.TypeWriter($"Smugness: {currentPlayer.Smugness}");
+
+        }
     }
 }

@@ -105,9 +105,9 @@ namespace TextRPG
             MainMenu.TypeWriter("Weird dude: No one died if that's what you're thinking.");
             Console.ForegroundColor = ConsoleColor.Yellow;
             MainMenu.TypeWriter("You finally stop climbing the stairs after what feels like an enternity.");
-            MainMenu.TypeWriter("Gene brings you out into an open floor with cubicle after cubicle. You squint your eyes.");
+            MainMenu.TypeWriter("Gene brings you out into an open floor with identical cubicle after identical cubicle. You squint your eyes.");
             Console.ResetColor();
-            Console.WriteLine(@"                _________________
+            Console.WriteLine(@"                     _________________
                                                     /                /|
                                                     /                / |
                                                     /________________/ /|
@@ -155,9 +155,9 @@ namespace TextRPG
  XXXXXXXXXXXXXXXXXX         XXXXXXXX
 XXXXXXXXXXXXXXXX              XXXXXXX
 XXXXXXXXXXXXX                   XXXXX
- XXX     _________ _________     XXX      THE
-  XX    I  _xxxxx I xxxxx_  I    XX        LOCKER
- ( X----I         I         I----X )           GNOME
+ XXX     _________ _________     XXX      
+  XX    I  _xxxxx I xxxxx_  I    XX        
+ ( X----I         I         I----X )           
 ( +I    I      00 I 00      I    I+ )
  ( I    I    __0  I  0__    I    I )
   (I    I______ /   \_______I    I)
