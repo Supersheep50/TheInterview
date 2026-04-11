@@ -1,0 +1,113 @@
+@page "/game"
+@using GameWebsite.Services
+@inject TerminalService Terminal
+@inject IJSRuntime JS
+@implements IDisposable
+
+<PageTitle>The Interview — Play</PageTitle>
+
+<audio id="bgMusic" src="music/leavinghome.wav" loop></audio>
+
+<div class="game-wrapper">
+    <div class="game-toolbar">
+        <span class="game-title">THE INTERVIEW</span>
+        <button class="btn-restart" @onclick="RestartGame">↺ Restart</button>
+    </div>
+
+    <div class="terminal-output" id="terminalOutput">
+        @foreach (var line in Terminal.Lines)
+        {
+            if (line.IsPreformatted)
+            {
+                <pre class="terminal-line @line.CssClass">@((MarkupString)line.Text)</pre>
+            }
+            else
+            {
+                <div class="terminal-line @line.CssClass">@line.Text</div>
+            }
+        }
+    </div>
+
+    <div class="terminal-input-row">
+        <span class="prompt-arrow">▶</span>
+        @if (Terminal.WaitingForInput)
+        {
+            <input @ref="inputRef"
+                   @bind="inputValue"
+                   @bind:event="oninput"
+                   @onkeydown="HandleKeyDown"
+                   class="terminal-input"
+                   placeholder="type here..."
+                   autocomplete="off"
+                   spellcheck="false" />
+        }
+        else
+        {
+            <span class="terminal-idle">...</span>
+        }
+    </div>
+</div>
+
+@code {
+    private ElementReference inputRef;
+    private string inputValue = "";
+    private bool _focusNeeded;
+    private GameLogic? _logic;
+
+    protected override void OnInitialized()
+    {
+        Terminal.OnStateChanged += OnGameStateChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !Terminal.GameStarted)
+        {
+            StartGameLoop();
+        }
+
+        await JS.InvokeVoidAsync("scrollToBottom", "terminalOutput");
+
+        if (_focusNeeded && Terminal.WaitingForInput)
+        {
+            _focusNeeded = false;
+            try { await inputRef.FocusAsync(); } catch { }
+        }
+    }
+
+    private void StartGameLoop()
+    {
+        Terminal.StartGame();
+        _logic = new GameLogic(Terminal, JS);
+        _ = _logic.RunAsync();
+    }
+
+    private void RestartGame()
+    {
+        Terminal.Reset();
+        Terminal.StartGame();
+        _logic = new GameLogic(Terminal, JS);
+        _ = _logic.RunAsync();
+    }
+
+    private async void OnGameStateChanged()
+    {
+        _focusNeeded = Terminal.WaitingForInput;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            var value = inputValue;
+            inputValue = "";
+            Terminal.SubmitInput(value);
+        }
+    }
+
+    public void Dispose()
+    {
+        Terminal.OnStateChanged -= OnGameStateChanged;
+    }
+}

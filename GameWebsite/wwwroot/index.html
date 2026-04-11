@@ -27,6 +27,16 @@
         <span class="dismiss">🗙</span>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        window.scrollToBottom = (id) => {
+            const el = document.getElementById(id);
+            if (el) el.scrollTop = el.scrollHeight;
+        };
+        window.playAudio = (id) => {
+            const el = document.getElementById(id);
+            if (el) el.play().catch(() => {});
+        };
+    </script>
 </body>
 
 </html>
